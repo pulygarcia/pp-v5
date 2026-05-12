@@ -8,11 +8,13 @@ interface Props {
 }
 
 defineProps<Props>()
+
+const NuxtLinkComp = resolveComponent('NuxtLink')
 </script>
 
 <template>
   <component
-    :is="to ? resolveComponent('NuxtLink') : 'a'"
+    :is="to ? NuxtLinkComp : 'a'"
     :to="to"
     :href="href"
     class="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-primary py-2 pl-6 pr-2 text-black transition-all hover:gap-5"
