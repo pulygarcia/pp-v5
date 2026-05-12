@@ -22,11 +22,6 @@ const links = [
   <section id="contact" class="bg-black px-4 pb-4 md:px-6 md:pb-6">
     <div class="mx-auto max-w-6xl rounded-2xl bg-[#101010] px-6 py-16 md:rounded-[2rem] md:px-12 md:py-24 lg:px-20 lg:py-32">
 
-      <!-- Eyebrow -->
-      <p class="mb-6 text-center text-[10px] uppercase tracking-[0.3em] text-primary/50 sm:text-xs">
-        Contact
-      </p>
-
       <!-- Heading -->
       <h2 class="mx-auto max-w-2xl text-center text-3xl font-medium leading-tight tracking-tight text-primary sm:text-4xl md:text-5xl">
         <WordsPullUp text="Let's build something together." />
