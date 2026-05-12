@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: projects } = await useAsyncData('projects', () =>
+const { data: projects } = useLazyAsyncData('projects', () =>
   queryCollection('projects')
     .where('draft', '<>', true)
     .order('order', 'ASC')
