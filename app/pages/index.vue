@@ -3,5 +3,7 @@
     <HeroSection />
     <AboutSection />
     <ProjectsSection />
+    <HobbiesSection />
+    <ContactSection />
   </div>
 </template>
