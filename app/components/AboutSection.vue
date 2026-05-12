@@ -22,7 +22,7 @@ const paragraphs = [
           About
         </p>
         <span
-          class="text-[10px] font-medium uppercase tracking-[0.2em] text-emerald-400 sm:text-xs"
+          class="text-[10px] font-medium uppercase tracking-[0.2em] text-emerald-400 sm:text-xs [text-shadow:0_0_24px_rgba(52,211,153,0.7)]"
         >
           Open to new opportunities
         </span>
@@ -35,17 +35,16 @@ const paragraphs = [
       </h2>
 
       <div class="mx-auto mt-12 max-w-3xl space-y-6 md:mt-16">
-        <ScrollRevealParagraph
+        <p
           v-for="(p, i) in paragraphs"
           :key="i"
-          :text="p"
-          :class-name="[
+          :class="[
             'text-center text-base leading-relaxed text-primary md:text-lg lg:text-xl',
             i === paragraphs.length - 1
-              ? '[text-shadow:0_0_16px_rgba(52,211,153,0.28)]'
+              ? '[text-shadow:0_0_24px_rgba(52,211,153,0.5)]'
               : '',
           ].join(' ')"
-        />
+        >{{ p }}</p>
       </div>
     </div>
   </section>
