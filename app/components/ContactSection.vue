@@ -1,4 +1,9 @@
 <script setup lang="ts">
+function scrollToTop() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' })
+}
+
 const links = [
   {
     label: 'Email',
@@ -55,13 +60,13 @@ const links = [
     <!-- Footer -->
     <footer class="mx-auto flex max-w-6xl items-center justify-between px-2 py-6 md:px-4">
       <span class="text-xs text-primary/30">Ignacio (Puly) G. · © {{ new Date().getFullYear() }}</span>
-      <a
-        href="#"
+      <button
+        type="button"
         class="text-xs text-primary/30 transition-colors hover:text-primary/60"
-        @click.prevent="() => window.scrollTo({ top: 0, behavior: 'smooth' })"
+        @click="scrollToTop"
       >
         Back to top ↑
-      </a>
+      </button>
     </footer>
   </section>
 </template>
