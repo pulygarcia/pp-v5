@@ -59,7 +59,16 @@ const videoSrc =
                 <span>Tucumán, Argentina</span>
               </p>
             </div>
-            <PillCTA to="/projects" label="Latest projects" class="self-start" />
+            <div class="flex flex-wrap items-center gap-3 self-start">
+              <PillCTA to="/projects" label="Latest projects" />
+              <PillCTA
+                href="/Jose-Robledo-CV-Full-Stack-Developer.pdf"
+                label="Download CV"
+                variant="outline"
+                icon="download"
+                download
+              />
+            </div>
           </div>
         </div>
       </div>
