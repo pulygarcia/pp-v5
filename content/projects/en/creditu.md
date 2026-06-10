@@ -1,4 +1,5 @@
 ---
+locale: en
 title: Fintech mortgage credit SaaS
 slug: creditu
 summary: SaaS platform for mortgage credit management in Chile, Brazil and Peru

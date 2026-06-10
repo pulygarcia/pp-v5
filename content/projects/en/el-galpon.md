@@ -1,4 +1,5 @@
 ---
+locale: en
 title: El Galpón
 slug: el-galpon
 summary: Fullstack reservation system for pádel club

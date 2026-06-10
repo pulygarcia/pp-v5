@@ -1,9 +1,15 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
-const { data: project } = await useAsyncData(`project-${route.params.slug}`, () =>
-  queryCollection('projects').where('slug', '=', route.params.slug as string).first()
+const { data: project } = await useAsyncData(
+  () => `project-${locale.value}-${route.params.slug}`,
+  () =>
+    queryCollection('projects')
+      .where('slug', '=', route.params.slug as string)
+      .where('locale', '=', locale.value)
+      .first(),
+  { watch: [locale] }
 )
 
 if (!project.value) {

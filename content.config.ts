@@ -4,8 +4,9 @@ export default defineContentConfig({
   collections: {
     projects: defineCollection({
       type: 'page',
-      source: 'projects/*.md',
+      source: 'projects/**/*.md',
       schema: z.object({
+        locale: z.enum(['es', 'en']),
         title: z.string(),
         slug: z.string(),
         summary: z.string(),

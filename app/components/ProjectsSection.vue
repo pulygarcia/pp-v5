@@ -1,12 +1,16 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-const { data: projects } = await useAsyncData('projects', () =>
-  queryCollection('projects')
-    .where('draft', '<>', true)
-    .order('order', 'ASC')
-    .all()
+const { data: projects } = await useAsyncData(
+  () => `projects-${locale.value}`,
+  () =>
+    queryCollection('projects')
+      .where('locale', '=', locale.value)
+      .where('draft', '<>', true)
+      .order('order', 'ASC')
+      .all(),
+  { watch: [locale] }
 )
 </script>
 

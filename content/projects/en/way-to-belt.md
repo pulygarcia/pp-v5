@@ -1,4 +1,5 @@
 ---
+locale: en
 title: WTB Fighting
 slug: way-to-belt
 summary: Platform for events, management and martial arts statistics

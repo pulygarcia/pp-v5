@@ -1,4 +1,5 @@
 ---
+locale: en
 title: TucDesign website
 slug: tucdesign
 summary: Modern website for an architecture and interior design studio
