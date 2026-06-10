@@ -1,15 +1,13 @@
 <script setup lang="ts">
-const headingSegments = [
-  { text: 'Interfaces that look great', className: 'text-primary' },
-  { text: ' and actually work ', className: 'italic font-serif text-primary' },
-  { text: '> interfaces that just work.', className: 'text-primary' },
-]
+const { t, locale } = useI18n()
 
-const paragraphs = [
-  'I am a 23 years old Developer, English B1, with +1 year of professional experience working at a fintech that facilitates access to housing in Chile, Brazil and Peru, contributing to a SaaS platform for mortgage credit management — applying SOLID principles and working with a Service-oriented architecture.',
-  'I develop using AI-assisted workflows and modern methodologies such as Spec-Driven Development, and I\'m always studying with best practices and modern technologies always focusing on clean code and engaging user interfaces.',
-  'I\'m looking for a place that brings new challenges and learning opportunities to keep growing in my career: a team where I can contribute to products with real impact, take ownerships, and sharpen my skills alongside experienced engineers.',
-]
+const headingSegments = computed(() => [
+  { text: t('about.headingPart1'), className: 'text-primary' },
+  { text: t('about.headingAccent'), className: 'italic font-serif text-primary' },
+  { text: t('about.headingPart2'), className: 'text-primary' },
+])
+
+const paragraphs = computed(() => [t('about.p1'), t('about.p2'), t('about.p3')])
 </script>
 
 <template>
@@ -19,19 +17,19 @@ const paragraphs = [
     >
       <div class="mb-8 flex flex-col items-center gap-4 md:mb-12">
         <p class="text-[10px] uppercase tracking-[0.3em] text-primary sm:text-xs">
-          About
+          {{ t('about.eyebrow') }}
         </p>
         <span
           class="text-[10px] font-medium uppercase tracking-[0.2em] text-emerald-400 sm:text-xs [text-shadow:0_0_24px_rgba(52,211,153,0.7)]"
         >
-          Open to new opportunities
+          {{ t('about.badge') }}
         </span>
       </div>
 
       <h2
         class="mx-auto max-w-5xl text-center font-medium leading-[1.05] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem]"
       >
-        <WordsPullUpMultiStyle :segments="headingSegments" />
+        <WordsPullUpMultiStyle :key="locale" :segments="headingSegments" />
       </h2>
 
       <div class="mx-auto mt-12 max-w-3xl space-y-6 md:mt-16">

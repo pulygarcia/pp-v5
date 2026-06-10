@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 const { data: projects } = await useAsyncData('projects', () =>
   queryCollection('projects')
     .where('draft', '<>', true)
@@ -12,9 +15,9 @@ const { data: projects } = await useAsyncData('projects', () =>
     <div class="mx-auto max-w-6xl">
       <!-- Header -->
       <div class="mb-12 flex flex-col items-start gap-3 md:mb-16">
-        <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 sm:text-xs">Projects</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 sm:text-xs">{{ t('projects.eyebrow') }}</p>
         <h2 class="text-3xl font-medium leading-tight tracking-tight text-primary sm:text-4xl md:text-5xl">
-          Selected work
+          {{ t('projects.heading') }}
         </h2>
       </div>
 
@@ -53,10 +56,10 @@ const { data: projects } = await useAsyncData('projects', () =>
       <!-- View all -->
       <div class="mt-10 flex justify-end">
         <NuxtLink
-          to="/projects"
+          :to="localePath('/projects')"
           class="inline-flex items-center gap-2 text-sm font-medium text-primary/70 transition-colors duration-200 hover:text-primary"
         >
-          View all projects
+          {{ t('projects.viewAll') }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"

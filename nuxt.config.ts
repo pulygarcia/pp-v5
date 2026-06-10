@@ -5,7 +5,20 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static',
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@vueuse/motion/nuxt', '@nuxt/content'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@vueuse/motion/nuxt', '@nuxt/content', '@nuxtjs/i18n'],
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'es',
+    locales: [
+      { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+  },
   css: ['~/assets/css/main.css'],
   googleFonts: {
     families: {

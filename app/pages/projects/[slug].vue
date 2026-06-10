@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 const { data: project } = await useAsyncData(`project-${route.params.slug}`, () =>
   queryCollection('projects').where('slug', '=', route.params.slug as string).first()
@@ -26,13 +28,13 @@ if (!project.value) {
 
       <!-- Back link -->
       <NuxtLink
-        to="/#projects"
+        :to="localePath('/projects')"
         class="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-black/60 px-4 py-2 text-xs text-primary/70 backdrop-blur-sm transition-colors hover:border-primary/50 hover:text-primary md:left-8 md:top-8"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M19 12H5M12 5l-7 7 7 7" />
         </svg>
-        Back
+        {{ t('projectDetail.back') }}
       </NuxtLink>
 
       <!-- Title block -->
@@ -62,7 +64,7 @@ if (!project.value) {
             target="_blank"
             class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-xs font-medium text-black transition-opacity hover:opacity-80"
           >
-            Live demo
+            {{ t('projectDetail.liveDemo') }}
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="rotate-[-45deg]"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a
@@ -70,13 +72,13 @@ if (!project.value) {
             :href="project.clientRepo"
             target="_blank"
             class="inline-flex items-center gap-2 rounded-full border border-primary/30 px-5 py-2 text-xs text-primary/70 transition-colors hover:border-primary/60 hover:text-primary"
-          >Client repo</a>
+          >{{ t('projectDetail.clientRepo') }}</a>
           <a
             v-if="project?.apiRepo"
             :href="project.apiRepo"
             target="_blank"
             class="inline-flex items-center gap-2 rounded-full border border-primary/30 px-5 py-2 text-xs text-primary/70 transition-colors hover:border-primary/60 hover:text-primary"
-          >API repo</a>
+          >{{ t('projectDetail.apiRepo') }}</a>
         </div>
       </div>
     </section>
@@ -102,7 +104,7 @@ if (!project.value) {
     <!-- Gallery -->
     <section v-if="project?.gallery && project.gallery.length > 1" class="px-6 pb-24 md:px-12 lg:px-20">
       <div class="mx-auto max-w-6xl">
-        <p class="mb-8 text-[10px] uppercase tracking-[0.3em] text-primary/40">Gallery</p>
+        <p class="mb-8 text-[10px] uppercase tracking-[0.3em] text-primary/40">{{ t('projectDetail.gallery') }}</p>
         <div class="columns-1 gap-4 sm:columns-2 lg:columns-3">
           <img
             v-for="(img, i) in project.gallery.slice(1)"
@@ -119,17 +121,17 @@ if (!project.value) {
     <div class="border-t border-primary/10 px-6 py-10 md:px-12 lg:px-20">
       <div class="mx-auto flex max-w-6xl justify-between">
         <NuxtLink
-          to="/#projects"
+          :to="localePath('/projects')"
           class="inline-flex items-center gap-2 text-sm text-primary/50 transition-colors hover:text-primary"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          All projects
+          {{ t('projectDetail.allProjects') }}
         </NuxtLink>
         <NuxtLink
-          to="/#contact"
+          :to="localePath('/') + '#contact'"
           class="inline-flex items-center gap-2 text-sm text-primary/50 transition-colors hover:text-primary"
         >
-          Contact
+          {{ t('projectDetail.contact') }}
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rotate-[-45deg]"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </NuxtLink>
       </div>

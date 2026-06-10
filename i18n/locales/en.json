@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "I am ...",
+    "role": "Fullstack Web Developer.",
+    "tagline": "Building clean and modern software.",
+    "experience": "+1 year of professional fintech experience.",
+    "age": "23 years old",
+    "location": "Tucumán, Argentina",
+    "ctaProjects": "Latest projects",
+    "ctaCv": "Download CV"
+  },
+  "about": {
+    "eyebrow": "About",
+    "badge": "Open to new opportunities",
+    "headingPart1": "Interfaces that look great",
+    "headingAccent": " and actually work ",
+    "headingPart2": "> interfaces that just work.",
+    "p1": "I am a 23 years old Developer, English B1, with +1 year of professional experience working at a fintech that facilitates access to housing in Chile, Brazil and Peru, contributing to a SaaS platform for mortgage credit management — applying SOLID principles and working with a Service-oriented architecture.",
+    "p2": "I develop using AI-assisted workflows and modern methodologies such as Spec-Driven Development, and I'm always studying with best practices and modern technologies always focusing on clean code and engaging user interfaces.",
+    "p3": "I'm looking for a place that brings new challenges and learning opportunities to keep growing in my career: a team where I can contribute to products with real impact, take ownerships, and sharpen my skills alongside experienced engineers."
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "headingPre": "What I build",
+    "headingAccent": "with.",
+    "labels": {
+      "language": "Language",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "styles": "Styles / Design",
+      "database": "Database",
+      "testing": "Testing",
+      "vcs": "Version Control",
+      "howIWork": "How I work",
+      "aiTools": "Daily AI Tools"
+    },
+    "howIWorkItems": ["AI-assisted workflows", "Spec-Driven Development", "Scrum"]
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "heading": "Selected work",
+    "viewAll": "View all projects",
+    "learnMore": "Learn more"
+  },
+  "projectsPage": {
+    "back": "Back",
+    "title": "All projects"
+  },
+  "projectDetail": {
+    "back": "Back",
+    "liveDemo": "Live demo",
+    "clientRepo": "Client repo",
+    "apiRepo": "API repo",
+    "gallery": "Gallery",
+    "allProjects": "All projects",
+    "contact": "Contact"
+  },
+  "hobbies": {
+    "eyebrow": "Beyond the code",
+    "heading": "Always exploring what's next.",
+    "paragraph": "In my free time I'm constantly testing new tools, frameworks and experiments. If something looks interesting, I build something with it.",
+    "list": ["Creative coding", "AI tooling & prompt workflows", "System design & architecture", "Open source exploration"],
+    "notCoding": "When I'm not coding",
+    "hobbies": ["Crypto trading", "UFC", "F1", "Padel", "Cycling"],
+    "dragHint": "Drag to rotate",
+    "canvasLabel": "Three.js · 20k particles"
+  },
+  "signature": "Contact me!",
+  "contact": {
+    "heading": "Let's build something together.",
+    "subtitle": "Open to new opportunities — reach out and I'll get back to you.",
+    "cta": "Send me an email",
+    "backToTop": "Back to top ↑"
+  }
+}

@@ -13,6 +13,9 @@ const props = defineProps<{
   variant: 'featured' | 'tile'
 }>()
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 const cardEl = ref<HTMLElement | null>(null)
 const isVisible = ref(false)
 
@@ -39,7 +42,7 @@ const { stop } = useIntersectionObserver(
     class="h-full"
   >
     <NuxtLink
-      :to="`/projects/${slug}`"
+      :to="localePath(`/projects/${slug}`)"
       class="group relative flex h-full flex-col overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1"
     >
       <!-- Featured card -->
@@ -97,7 +100,7 @@ const { stop } = useIntersectionObserver(
               >{{ tag }}</span>
             </div>
             <span class="inline-flex items-center gap-1.5 text-xs font-medium text-primary">
-              Learn more
+              {{ t('projects.learnMore') }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"

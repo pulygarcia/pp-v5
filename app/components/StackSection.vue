@@ -1,21 +1,23 @@
 <script setup lang="ts">
+const { t, tm, rt } = useI18n()
+
 type Column = {
   label: string
   items: string[]
   serif?: boolean
 }
 
-const columns: Column[] = [
-  { label: 'Language', items: ['TypeScript'] },
-  { label: 'Backend', items: ['NestJS', 'Node.js'] },
-  { label: 'Frontend', items: ['Vue.js', 'Next.js'] },
-  { label: 'Styles / Design', items: ['Tailwind CSS', 'shadcn/ui'] },
-  { label: 'Database', items: ['PostgreSQL', 'TypeORM'] },
-  { label: 'Testing', items: ['Jest'] },
-  { label: 'Version Control', items: ['Git', 'GitHub'] },
-  { label: 'How I work', items: ['AI-assisted workflows', 'Spec-Driven Development', 'Scrum'], serif: true },
-  { label: 'Daily AI Tools', items: ['Claude', 'Cursor'] },
-]
+const columns = computed<Column[]>(() => [
+  { label: t('stack.labels.language'), items: ['TypeScript'] },
+  { label: t('stack.labels.backend'), items: ['NestJS', 'Node.js'] },
+  { label: t('stack.labels.frontend'), items: ['Vue.js', 'Next.js'] },
+  { label: t('stack.labels.styles'), items: ['Tailwind CSS', 'shadcn/ui'] },
+  { label: t('stack.labels.database'), items: ['PostgreSQL', 'TypeORM'] },
+  { label: t('stack.labels.testing'), items: ['Jest'] },
+  { label: t('stack.labels.vcs'), items: ['Git', 'GitHub'] },
+  { label: t('stack.labels.howIWork'), items: (tm('stack.howIWorkItems') as unknown[]).map((m) => rt(m as string)), serif: true },
+  { label: t('stack.labels.aiTools'), items: ['Claude', 'Cursor'] },
+])
 </script>
 
 <template>
@@ -25,9 +27,9 @@ const columns: Column[] = [
   >
     <div class="mx-auto max-w-6xl">
       <div class="mb-12 flex flex-col items-start gap-3 md:mb-16">
-        <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 sm:text-xs">Stack</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-primary/60 sm:text-xs">{{ t('stack.eyebrow') }}</p>
         <h2 class="text-3xl font-medium leading-tight tracking-tight text-primary sm:text-4xl md:text-5xl">
-          What I build <span class="font-serif italic font-normal text-primary/80">with.</span>
+          {{ t('stack.headingPre') }} <span class="font-serif italic font-normal text-primary/80">{{ t('stack.headingAccent') }}</span>
         </h2>
       </div>
 

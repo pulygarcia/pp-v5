@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { t, locale } = useI18n()
+
 function scrollToTop() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' })
@@ -29,16 +31,16 @@ const links = [
 
       <!-- Heading -->
       <h2 class="mx-auto max-w-2xl text-center text-3xl font-medium leading-tight tracking-tight text-primary sm:text-4xl md:text-5xl">
-        <WordsPullUp text="Let's build something together." />
+        <WordsPullUp :key="locale" :text="t('contact.heading')" />
       </h2>
 
       <p class="mx-auto mt-6 max-w-md text-center text-base leading-relaxed text-primary/50 md:text-lg">
-        Open to new opportunities — reach out and I'll get back to you.
+        {{ t('contact.subtitle') }}
       </p>
 
       <!-- CTA -->
       <div class="mt-10 flex justify-center">
-        <PillCTA href="mailto:pulygarcia09@gmail.com" label="Send me an email" />
+        <PillCTA href="mailto:pulygarcia09@gmail.com" :label="t('contact.cta')" />
       </div>
 
       <!-- Links -->
@@ -65,7 +67,7 @@ const links = [
         class="text-xs text-primary/30 transition-colors hover:text-primary/60"
         @click="scrollToTop"
       >
-        Back to top ↑
+        {{ t('contact.backToTop') }}
       </button>
     </footer>
   </section>

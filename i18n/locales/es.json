@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "stack": "Stack",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Soy ...",
+    "role": "Desarrollador Web Fullstack.",
+    "tagline": "Construyo software limpio y moderno.",
+    "experience": "+1 año de experiencia profesional en fintech.",
+    "age": "23 años",
+    "location": "Tucumán, Argentina",
+    "ctaProjects": "Últimos proyectos",
+    "ctaCv": "Descargar CV"
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "badge": "Abierto a nuevas oportunidades",
+    "headingPart1": "Interfaces que se ven geniales",
+    "headingAccent": " y además funcionan ",
+    "headingPart2": "> interfaces que solo funcionan.",
+    "p1": "Soy un Desarrollador de 23 años, inglés B1, con +1 año de experiencia profesional trabajando en una fintech que facilita el acceso a la vivienda en Chile, Brasil y Perú, contribuyendo a una plataforma SaaS para la gestión de crédito hipotecario — aplicando principios SOLID y trabajando con una arquitectura orientada a servicios.",
+    "p2": "Desarrollo usando flujos de trabajo asistidos por IA y metodologías modernas como Spec-Driven Development, y estudio constantemente con buenas prácticas y tecnologías modernas, siempre enfocado en el código limpio y en interfaces atractivas.",
+    "p3": "Busco un lugar que traiga nuevos desafíos y oportunidades de aprendizaje para seguir creciendo en mi carrera: un equipo donde pueda contribuir a productos con impacto real, tomar responsabilidad sobre trabajo significativo y afinar mis habilidades junto a ingenieros con experiencia."
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "headingPre": "Con qué",
+    "headingAccent": "construyo.",
+    "labels": {
+      "language": "Lenguaje",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "styles": "Estilos / Diseño",
+      "database": "Base de datos",
+      "testing": "Testing",
+      "vcs": "Control de versiones",
+      "howIWork": "Cómo trabajo",
+      "aiTools": "Herramientas IA diarias"
+    },
+    "howIWorkItems": ["Flujos asistidos por IA", "Spec-Driven Development", "Scrum"]
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "heading": "Trabajos seleccionados",
+    "viewAll": "Ver todos los proyectos",
+    "learnMore": "Ver más"
+  },
+  "projectsPage": {
+    "back": "Volver",
+    "title": "Todos los proyectos"
+  },
+  "projectDetail": {
+    "back": "Volver",
+    "liveDemo": "Ver demo",
+    "clientRepo": "Repo del cliente",
+    "apiRepo": "Repo de la API",
+    "gallery": "Galería",
+    "allProjects": "Todos los proyectos",
+    "contact": "Contacto"
+  },
+  "hobbies": {
+    "eyebrow": "Más allá del código",
+    "heading": "Siempre explorando lo que viene.",
+    "paragraph": "En mi tiempo libre pruebo constantemente nuevas herramientas, frameworks y experimentos. Si algo parece interesante, construyo algo con eso.",
+    "list": ["Creative coding", "Herramientas IA y flujos de prompts", "Diseño de sistemas y arquitectura", "Exploración de open source"],
+    "notCoding": "Cuando no estoy programando",
+    "hobbies": ["Trading de cripto", "UFC", "F1", "Pádel", "Ciclismo"],
+    "dragHint": "Arrastrá para rotar",
+    "canvasLabel": "Three.js · 20k partículas"
+  },
+  "signature": "¡Contactame!",
+  "contact": {
+    "heading": "Construyamos algo juntos.",
+    "subtitle": "Abierto a nuevas oportunidades — escribime y te respondo.",
+    "cta": "Enviame un email",
+    "backToTop": "Volver arriba ↑"
+  }
+}
