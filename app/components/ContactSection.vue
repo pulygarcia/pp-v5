@@ -19,8 +19,8 @@ const links = [
   },
   {
     label: 'LinkedIn',
-    value: 'jose-ignacio-robledo',
-    href: 'https://www.linkedin.com/in/jose-ignacio-robledo/',
+    value: 'pulygarcia',
+    href: 'https://www.linkedin.com/in/pulygarcia/',
   },
 ]
 </script>
