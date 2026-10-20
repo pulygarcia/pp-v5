@@ -82,7 +82,7 @@ TypeScript · Node.js · Nest.js · Vue.js · Next.js · Tailwind CSS · shadcn/
 ### Contact
 - Email — pulygarcia09@gmail.com
 - GitHub — pulygarcia (https://github.com/pulygarcia)
-- LinkedIn — jose-ignacio-robledo (https://www.linkedin.com/in/jose-ignacio-robledo/)
+- LinkedIn — pulygarcia (https://www.linkedin.com/in/pulygarcia/)
 
 ### Footer
 - Brand: `Puly G` · `© <year>` · social links · back-to-top
