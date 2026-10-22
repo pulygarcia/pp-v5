@@ -7,9 +7,9 @@
   },
   "hero": {
     "eyebrow": "Soy ...",
-    "role": "Desarrollador Web Fullstack.",
+    "role": "Desarrollador Full Stack orientado a producto.",
     "tagline": "Construyo software limpio y moderno.",
-    "experience": "+1 año de experiencia profesional en fintech.",
+    "experience": "+1 año de experiencia profesional en un SaaS fintech.",
     "age": "23 años",
     "location": "Tucumán, Argentina",
     "ctaProjects": "Últimos proyectos",
@@ -65,11 +65,7 @@
     "eyebrow": "Más allá del código",
     "heading": "Siempre explorando lo que viene.",
     "paragraph": "En mi tiempo libre pruebo constantemente nuevas herramientas, frameworks y experimentos. Si algo parece interesante, construyo algo con eso.",
-    "list": ["Creative coding", "Herramientas IA y flujos de prompts", "Diseño de sistemas y arquitectura", "Exploración de open source"],
-    "notCoding": "Cuando no estoy programando",
-    "hobbies": ["Trading de cripto", "UFC", "F1", "Pádel", "Ciclismo"],
-    "dragHint": "Arrastrá para rotar",
-    "canvasLabel": "Three.js · 20k partículas"
+    "list": ["Creative coding", "Herramientas IA y flujos de prompts", "Diseño de sistemas y arquitectura", "Exploración de open source"]
   },
   "signature": "¡Contactame!",
   "contact": {

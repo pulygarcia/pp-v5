@@ -15,7 +15,7 @@ gallery:
   - /td-map.PNG
   - /td-about.PNG
 demoUrl: https://tuc-design.vercel.app
-order: 3
+order: 4
 ---
 
 TucDesign is a modern, responsive website created for an architecture and interior design studio, focused in visual impact and clean design. It showcases the studio's philosophy, featured projects, client testimonials, and ways to contact or request a consultation.

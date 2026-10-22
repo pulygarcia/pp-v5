@@ -77,14 +77,20 @@ if (!project.value) {
             v-if="project?.clientRepo"
             :href="project.clientRepo"
             target="_blank"
-            class="inline-flex items-center gap-2 rounded-full border border-primary/30 px-5 py-2 text-xs text-primary/70 transition-colors hover:border-primary/60 hover:text-primary"
-          >{{ t('projectDetail.clientRepo') }}</a>
+            class="inline-flex items-center gap-2 rounded-full border border-primary/70 bg-primary/10 px-5 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary hover:text-black"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            {{ t('projectDetail.clientRepo') }}
+          </a>
           <a
             v-if="project?.apiRepo"
             :href="project.apiRepo"
             target="_blank"
-            class="inline-flex items-center gap-2 rounded-full border border-primary/30 px-5 py-2 text-xs text-primary/70 transition-colors hover:border-primary/60 hover:text-primary"
-          >{{ t('projectDetail.apiRepo') }}</a>
+            class="inline-flex items-center gap-2 rounded-full border border-primary/70 bg-primary/10 px-5 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary hover:text-black"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            {{ t('projectDetail.apiRepo') }}
+          </a>
         </div>
       </div>
     </section>
@@ -93,14 +99,7 @@ if (!project.value) {
     <section class="px-6 py-16 md:px-12 md:py-24 lg:px-20 lg:py-32">
       <div class="mx-auto max-w-3xl">
         <div
-          class="prose max-w-none
-            prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-primary
-            prose-h2:mt-12 prose-h2:text-2xl prose-h2:border-b prose-h2:border-primary/10 prose-h2:pb-3 prose-h2:md:text-3xl
-            prose-p:text-primary/70 prose-p:leading-relaxed prose-p:text-base prose-p:md:text-lg
-            prose-strong:text-primary prose-strong:font-medium
-            prose-li:text-primary/70 prose-li:leading-relaxed
-            prose-ul:space-y-2
-          "
+          class="case-body"
         >
           <ContentRenderer v-if="project" :value="project" />
         </div>
@@ -145,3 +144,27 @@ if (!project.value) {
 
   </div>
 </template>
+
+<style scoped>
+.case-body :deep(p) {
+  @apply mb-6 text-base leading-[1.8] text-primary/70 md:text-lg;
+}
+.case-body :deep(h2) {
+  @apply mb-8 mt-20 border-b border-primary/10 pb-4 text-2xl font-medium tracking-tight text-primary md:text-3xl;
+}
+.case-body :deep(h2:first-child) {
+  @apply mt-0;
+}
+.case-body :deep(ul) {
+  @apply mb-6 flex flex-col gap-8;
+}
+.case-body :deep(li) {
+  @apply border-l border-primary/15 pl-5 text-base leading-[1.75] text-primary/65 md:text-[1.05rem];
+}
+.case-body :deep(li strong) {
+  @apply font-medium text-primary;
+}
+.case-body :deep(a) {
+  @apply text-primary underline underline-offset-4;
+}
+</style>
