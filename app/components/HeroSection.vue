@@ -36,12 +36,7 @@ const videoSrc =
             <h1
               class="font-medium leading-[0.85] tracking-[-0.07em] text-primary text-[16vw] sm:text-[15vw] md:text-[14vw] lg:text-[13vw] xl:text-[12vw] 2xl:text-[13vw]"
             >
-              <span class="relative inline-block">
-                Ignacio G.<span
-                  class="absolute text-[0.31em]"
-                  style="top: 0.65em; right: -0.3em"
-                >*</span>
-              </span>
+              Ignacio G.
             </h1>
           </div>
 

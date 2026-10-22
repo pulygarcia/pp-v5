@@ -7,9 +7,9 @@
   },
   "hero": {
     "eyebrow": "I am ...",
-    "role": "Fullstack Web Developer.",
+    "role": "Product-minded Full Stack Developer.",
     "tagline": "Building clean and modern software.",
-    "experience": "+1 year of professional fintech experience.",
+    "experience": "+1 year of professional experience on a fintech SaaS.",
     "age": "23 years old",
     "location": "Tucumán, Argentina",
     "ctaProjects": "Latest projects",
@@ -65,11 +65,7 @@
     "eyebrow": "Beyond the code",
     "heading": "Always exploring what's next.",
     "paragraph": "In my free time I'm constantly testing new tools, frameworks and experiments. If something looks interesting, I build something with it.",
-    "list": ["Creative coding", "AI tooling & prompt workflows", "System design & architecture", "Open source exploration"],
-    "notCoding": "When I'm not coding",
-    "hobbies": ["Crypto trading", "UFC", "F1", "Padel", "Cycling"],
-    "dragHint": "Drag to rotate",
-    "canvasLabel": "Three.js · 20k particles"
+    "list": ["Creative coding", "AI tooling & prompt workflows", "System design & architecture", "Open source exploration"]
   },
   "signature": "Contact me!",
   "contact": {
