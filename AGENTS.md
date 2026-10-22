@@ -59,9 +59,9 @@ The body of the markdown is the case-study copy rendered on `/projects/[slug]`.
 
 ### Hero
 - Eyebrow: `I am ...`
-- Word-mark: `I. García` (uses Prisma-style scaling; superscript `*` optional)
+- Word-mark: `Ignacio G.` (Prisma-style scaling, no asterisk)
 - Dark theme only (pp-v4 had a light/dark toggle — dropped here)
-- Sub: `23 y/o developer with professional fintech experience, building clean and modern software.`
+- Role: `Product-minded Full Stack Developer.` · Experience: `+1 year of professional experience on a fintech SaaS.`
 - CTAs: `About me` (#about) · `Latest projects` (/projects) · `Contact` (#contact)
 
 ### About
@@ -74,10 +74,12 @@ The body of the markdown is the case-study copy rendered on `/projects/[slug]`.
 ### Tech stack (in this order)
 TypeScript · Node.js · Nest.js · Vue.js · Next.js · Tailwind CSS · shadcn/ui · PostgreSQL · TypeORM · Jest · Git · GitHub
 
-### Projects (3)
-1. **WTB Fighting** — Platform for events, management and martial arts statistics · Full-stack · Nest.js + Nuxt 4 · client: pulygarcia/way-to-belt-client · api: pulygarcia/way-to-belt
-2. **El Galpón** — Fullstack reservation system for pádel club · Full-stack + Email · Next.js + Nest.js · client: pulygarcia/Courts-reservations-client · api: pulygarcia/Courts-reservations
-3. **TucDesign** — Modern site for architecture & interior design studio · Front-end · Vue 3 · demo: https://tuc-design.vercel.app
+### Projects (order)
+0. **Creditu** — Mortgage credit SaaS (Chile, Brazil, Peru) · Full-stack · NestJS + Vue · professional role, no public repos
+1. **Vonder** — Operations management and point-of-sale SaaS for businesses · Full-stack (own product) · NestJS + Prisma + Next.js · repos private, no demo link
+2. **WTB Fighting** — Platform for events, management and martial arts statistics · Full-stack · Nest.js + Nuxt 4 · client: pulygarcia/way-to-belt-client · api: pulygarcia/way-to-belt
+3. **El Galpón** — Fullstack reservation system for pádel club · Full-stack + Email · Next.js + Nest.js · client: pulygarcia/Courts-reservations-client · api: pulygarcia/Courts-reservations
+4. **TucDesign** — Modern site for architecture & interior design studio · Front-end · Vue 3 · demo: https://tuc-design.vercel.app
 
 ### Contact
 - Email — pulygarcia09@gmail.com

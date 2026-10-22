@@ -31,7 +31,7 @@ gallery:
   - /wtb-delete-fighter.PNG
 clientRepo: https://github.com/pulygarcia/way-to-belt-client
 apiRepo: https://github.com/pulygarcia/way-to-belt
-order: 1
+order: 2
 ---
 
 Plataforma web fullstack completa de eventos, gestión y estadísticas de artes marciales.
