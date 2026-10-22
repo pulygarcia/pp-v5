@@ -33,22 +33,37 @@ const columns = computed<Column[]>(() => [
         </h2>
       </div>
 
-      <div class="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 md:gap-x-12 md:gap-y-14 group/grid">
-        <div v-for="c in columns" :key="c.label" class="flex flex-col">
-          <p class="mb-4 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-primary/45 sm:text-xs">
-            <span class="h-px w-5 bg-primary/30"></span>
+      <div class="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 md:gap-x-12 md:gap-y-14">
+        <div
+          v-for="(c, ci) in columns"
+          :key="c.label"
+          class="group flex flex-col border-t border-primary/15 pt-5"
+        >
+          <p class="mb-4 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-primary/50 sm:text-xs">
+            <span class="h-px w-5 bg-primary/40 transition-all duration-500 ease-out group-hover:w-10 group-hover:bg-primary"></span>
             {{ c.label }}
           </p>
           <p
-            v-for="item in c.items"
+            v-for="(item, ii) in c.items"
             :key="item"
+            v-motion
+            :initial="{ opacity: 0, y: 24 }"
+            :visible-once="{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: ((ci % 3) * 0.1 + ii * 0.08) * 1000,
+                duration: 800,
+                ease: [0.16, 1, 0.3, 1],
+              },
+            }"
             :class="[
               c.serif
                 ? 'font-serif italic text-xl leading-[1.2] sm:text-2xl md:text-[1.65rem]'
                 : 'text-2xl font-medium tracking-tight sm:text-3xl md:text-4xl',
-              'text-primary/40 transition-all duration-300 group-hover/grid:text-primary/20 hover:!text-primary',
+              'text-primary',
             ]"
-          >{{ item }}</p>
+          ><span class="inline-block transition-transform duration-500 ease-out group-hover:translate-x-2">{{ item }}</span></p>
         </div>
       </div>
 
